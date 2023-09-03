@@ -42,7 +42,7 @@ const Todos = () => {
   const getTodos = async () => {
     const token = window.localStorage.getItem('todo-app-user');
 
-    const result = await axios.get('http://localhost:4000/todos', { headers: { 'Authorization': token } });
+    const result = await axios.get('process.env.REACT_APP_API/todos', { headers: { 'Authorization': token } });
 
     setTodos(result.data.response);
   };
@@ -54,7 +54,7 @@ const Todos = () => {
 
     const token = window.localStorage.getItem('todo-app-user');
 
-    await axios.post('http://localhost:4000/todos', values, { headers: { 'Authorization': token } });
+    await axios.post('process.env.REACT_APP_API/todos', values, { headers: { 'Authorization': token } });
 
     setValues({});
 

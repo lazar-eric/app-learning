@@ -33,7 +33,7 @@ const Register = () => {
 
   const onRegister = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/users', values);
+      const response = await axios.post('process.env.REACT_APP_API/users', values);
 
       console.log('Response', response);
 
