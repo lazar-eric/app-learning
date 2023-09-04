@@ -8,7 +8,7 @@ import Routes from './Routes';
 const useStyle = style(theme => ({
   '@pure': {
     body: {
-      margin: 0
+      margin: '0px'
     }
   },
 
