@@ -44,6 +44,12 @@ const run = async () => {
 
   app.use(express.static(path.join(__dirname, './build')));
 
+  // Ako odemo na bilo koju rutu (stranicu) na nasem domenu 
+  // moramo da user-u vratimo kao odgovor index.html  
+  // u kojem se nalazi nasa react aplikacija 
+  // i react aplikacija unutar svoje logike 
+  // ce da prikaze user-u 
+  // stranicu koju treba da vidi 
   app.get('*', (req, res) => {
     return res.sendFile(path.join(__dirname, './build/index.html'));
   });
